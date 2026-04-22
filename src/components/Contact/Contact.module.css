@@ -1,0 +1,86 @@
+.contactSection {
+  text-align: center;
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-12);
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-10);
+  flex-wrap: wrap;
+}
+
+.iconCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  group: hover;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-primary-100);
+  border-radius: 50%;
+  color: var(--color-primary-700);
+  font-size: 28px;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="dark"] .icon {
+  border-color: var(--color-border);
+  color: var(--color-primary-400);
+}
+
+.label {
+  color: var(--color-text);
+  font-weight: 500;
+  transition: color var(--transition-base);
+}
+
+/* Hover Effects */
+.iconCard:hover .icon {
+  background-color: var(--color-primary-700);
+  color: #fff;
+  border-color: var(--color-primary-700);
+  transform: scale(1.15);
+  box-shadow: var(--shadow-glow);
+}
+
+[data-theme="dark"] .iconCard:hover .icon {
+  background-color: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+}
+
+.iconCard:hover .label {
+  color: var(--color-primary-700);
+}
+
+[data-theme="dark"] .iconCard:hover .label {
+  color: var(--color-primary-400);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .iconContainer {
+    gap: var(--space-6);
+  }
+  .icon {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+}

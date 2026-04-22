@@ -1,0 +1,75 @@
+.footer {
+  background-color: var(--color-primary-900);
+  padding: var(--space-6) 0;
+  text-align: center;
+  position: relative;
+  margin-top: auto;
+}
+
+[data-theme="dark"] .footer {
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+}
+
+.copyright {
+  color: #e2e8f0;
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+[data-theme="dark"] .copyright {
+  color: var(--color-text-muted);
+}
+
+/* Back to Top Button */
+.topBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-accent);
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all var(--transition-base);
+  z-index: 999;
+}
+
+.topBtn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.topBtn:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(250, 204, 21, 0.4);
+}
+
+.topIcon {
+  font-size: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .topBtn {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
